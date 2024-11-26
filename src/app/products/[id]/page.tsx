@@ -8,7 +8,6 @@ export default function EditProductsPage() {
 
         <div>
             <h4>Edit Product: {params.id}</h4>
-
             <form>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
