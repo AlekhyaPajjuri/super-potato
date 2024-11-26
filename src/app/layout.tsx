@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,7 +29,40 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+
+        <div className="container">
+          <nav className="navbar navbar-dark bg-dark">
+            {/* <div className="container-fluid">
+              <Link className="navbar-brand" href="#">Next.js</Link>
+              <ul className="nav">
+                <li className="nav-item">
+                  <Link className="nav-link" href="/">Home</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" href="/about">About</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" href="/products">Products</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" href="/login">Login</Link>
+                </li>
+
+              </ul>
+            </div> */}
+
+
+            
+          </nav>
+
+
+          <main>
+            {/* Routes */}
+            {children}
+          </main>
+
+
+        </div>
       </body>
     </html>
   );
